@@ -10,20 +10,20 @@ const list = document.querySelector('.ul');
 const button = document.querySelector('.todo-button');
 
 button.addEventListener('click', (e) => {
-        if (!(input.value)) {
-            alert("input can't be empty");
-        } else {
-            const li = document.createElement('li');
-            li.innerText = input.value;
-            list.appendChild(li);
+    if (!(input.value)) {
+        alert("input can't be empty");
+    } else {
+        const li = document.createElement('li');
+        li.innerText = input.value;
+        list.appendChild(li);
 
-            const img = document.createElement('img');
-            img.src = "images/delete.svg";
-            li.appendChild(img);
+        const img = document.createElement('img');
+        img.src = "images/delete.svg";
+        li.appendChild(img);
 
-            input.value = "";
-            saveData();
-        }
+        input.value = "";
+        saveData();
+    }
 });
 
 list.addEventListener('click', (e) => {
@@ -34,15 +34,15 @@ list.addEventListener('click', (e) => {
     } else if (e.target.tagName === "IMG") {
         const ele = e.target.parentElement;
         ele.remove();
+        saveData();
 
         const delList = document.querySelector('.del-list');
         const trashList = document.querySelector('.ul-trash');
         trashList.append(ele);
-        console.log(trashList)
         delList.appendChild(trashList);
 
-        saveData();
         saveData1();
+
     }
 });
 
@@ -61,6 +61,7 @@ ulTrash.addEventListener('click', (e) => {
     if (e.target.tagName === "IMG") {
         e.target.parentElement.remove();
     }
+    saveData1();
 });
 
 function saveData1() {
