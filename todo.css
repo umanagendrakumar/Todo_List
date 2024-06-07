@@ -17,7 +17,7 @@ body {
 .wrapper {
     background-color: white;
     border-radius: 20px;
-    width: 500px;
+    max-width: 480px;
     margin-inline: auto;
     margin-block: 2rem;
     padding-block-end: 3rem;
@@ -37,6 +37,11 @@ body {
     justify-content: space-between;
     background-color: rgb(240, 238, 238);
     border-radius: 30px;
+}
+@media screen and (max-width: 340px) {
+    /* .wrapper .todo-add {
+        flex-direction: column;
+    } */
 }
 
 .todo-add .todo-input {
