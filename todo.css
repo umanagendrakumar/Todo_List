@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #e6ff01, rgb(1, 255, 200), #4800ff)
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.wrapper {
+    background-color: white;
+    border-radius: 20px;
+    width: 500px;
+    margin-inline: auto;
+    margin-block: 2rem;
+    padding-block-end: 3rem;
+}
+
+.wrapper .todo-head {
+    color: rgb(92, 163, 180);
+    padding-block: 1rem;
+    padding-inline-start: 1.2rem;
+}
+
+.wrapper .todo-add {
+    margin-inline: 1.1rem;
+    margin-block-end: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(240, 238, 238);
+    border-radius: 30px;
+}
+
+.todo-add .todo-input {
+    flex: 1;
+    padding-inline-start: 1.5rem;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.todo-add .todo-button {
+    padding: 1rem 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(200, 111, 238);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.todo-add .todo-button:hover {
+    background-color: rgb(205, 142, 232);
+}
+
+.todo-add .todo-button:active {
+    transform: scale(0.97, 0.97);
+}
+
+.wrapper .added-list {
+    margin-inline: 1rem;
+}
+
+.added-list ul li {
+    list-style-type: none;
+    margin: 0.2rem;
+    padding-block: 0.3rem;
+    padding-inline: 2.5rem 1rem;
+    border-radius: 20px;
+    font-size: 17px;
+    position: relative;
+    cursor: pointer;
+}
+
+.added-list li::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    height: 17px;
+    width: 17px;
+    background-image: url(images/uncheck.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.added-list ul li.checked {
+    text-decoration: line-through;
+}
+
+.added-list ul li.checked::before {
+    background-image: url(images/check.svg)
+}
+
+li img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.wrap2 {
+    padding: 1rem;
+}
+
+.wrap2 .del-head {
+    color: red;
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+.ul-trash {
+    position: relative;
+}
+
+.del-list .ul-trash li {
+    list-style-type: none;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-size: 17px;
+    position: relative;
+    cursor: pointer;
+}
